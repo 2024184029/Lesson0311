@@ -14,10 +14,10 @@ int main()
 
 	//int* P = new int[SIZE];
 	int* P = nullptr;
-	P = new int[SIZE];
+	P = new int[SIZE]; // 시작번지 (int*)
 
 	// 예외처리 (유효값X면 종료)
-	if (!P) // if (P == nullpter)
+	if (!P) // if(P == nullpter) if(P == 0)
 	{
 		return -1;
 	}
@@ -33,6 +33,7 @@ int main()
 	}
 	cout << endl;
 
+	// heap에 있는 배열 반환해주세요
 	delete[] P;
 	P = nullptr;
 
