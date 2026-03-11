@@ -15,9 +15,22 @@ void CountingChar(char* Str)
 
 void ChangeChar(char* P)
 {
-	*(P + 6) = 'Q';
+	int N = 0;
+	char W;
+
+	cout << "바꾸고 싶은 자리와 문자를 차례로 입력하세요: ";
+	cin >> N >> W;
+
+	*(P + N) = W;
+
 	cout << P << endl;
 }
+
+//void ChangeChar(char* P)
+//{
+//	*(P + 6) = 'Q';
+//	cout << P << endl;
+//}
 
 void FindChar(char* Str)
 {
@@ -29,7 +42,7 @@ void FindChar(char* Str)
 	{
 		if (Str[i] == Input)
 		{
-			cout << Input << "은 " << i << "번째 위치에 있습니다" << endl;
+			cout << Input << "은 " << i + 1 << "번째 위치에 있습니다" << endl;
 			break;
 		}
 	}
