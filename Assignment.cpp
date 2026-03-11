@@ -8,7 +8,7 @@ void CountingChar(char* Str)
 	{
 		if (Str[i] == '\0')
 		{
-			cout << "문자열 갯수는 " << i + 1 << "개 입니다" << endl;
+			cout << "문자열 갯수는 " << i << "개 입니다" << endl;
 		}
 	}
 }
@@ -18,7 +18,7 @@ void ChangeChar(char* P)
 	int N = 0;
 	char W;
 
-	cout << "바꾸고 싶은 자리와 문자를 차례로 입력하세요: ";
+	cout << "바꾸고 싶은 자리(0~10)와 문자(알파벳)를 차례로 입력하세요: ";
 	cin >> N >> W;
 
 	*(P + N) = W;
@@ -58,6 +58,8 @@ int main()
 
 	char Str[11] = { 'H', 'e', 'l', 'l', 'o', 'W', 'o', 'r', 'l', 'd', '\0' };
 	char* P = Str;
+	
+	cout << Str << endl;
 
 	CountingChar(Str);
 
